@@ -25,17 +25,13 @@ function runGame(gameType) {
     let num1 = Math.floor(Math.random() * 25) + 1;
     let num2 = Math.floor(Math.random() * 25) + 1;
 
-<<<<<<< HEAD
     if (gameType === "addition") {
         displayAdditionQuestion(num1, num2);
+    } else if (gameType === "subtract") {
+        displaySubtractQuestion(num1, num2);
+    } else if (gameType === "multiply") {
+        displayMultiplyQuestion(num1, num2);
     } else {
-=======
-    if (gameType === "addition"){
-        displayAdditionQuestion(num1,num2);
-    } else if(gameType === "subtraction"){
-      displaySubtractQuestion(num1, num2);
-    } else{
->>>>>>> 3912fc3561b2bef5957563ca3056736546fb495d
         alert(`Unknown game type: ${gameType}`);
         throw `Unknown game type: ${gameType}. Aborting!`;
     }
@@ -72,19 +68,13 @@ function calculateCorrectAnswer() {
 
     if (operator === "+") {
         return [operand1 + operand2, "addition"];
-<<<<<<< HEAD
+    } else if (operator === "-") {
+        return [operand1 - operand2, "subtract"];
+    } else if (operator === "x") {
+        return [operand1 * operand2, "multiply"];
     } else {
         alert(`Unsupported operation '${operator}'`);
         throw `Unsupported operation '${operator}. Aborting!'`;
-=======
-    } else if (operator === "-") {
-      return [operand1 - operand2, "subtraction"];
-    } else if (operator === "x") {
-      return [operand1 * operand2, "multiplication"];
-    } else {
-      alert(`Unsupported operation '${operator}'`);
-      throw `Unsupported operation '${operator}. Aborting!'`;
->>>>>>> 3912fc3561b2bef5957563ca3056736546fb495d
     }
 }
 
@@ -110,18 +100,13 @@ function displayAdditionQuestion(operand1, operand2) {
     document.getElementById("operand2").textContent = operand2;
     document.getElementById("operator").textContent = "+";
 }
-<<<<<<< HEAD
-function displaySubtractQuestion() { }
-function displayMultiplyQuestion() { }
-=======
 function displaySubtractQuestion(operand1, operand2) {
-  document.getElementById("operand1").textContent = operand1;
-  document.getElementById("operand2").textContent = operand2;
-  document.getElementById("operator").textContent = "-";
+    document.getElementById("operand1").textContent = operand1;
+    document.getElementById("operand2").textContent = operand2;
+    document.getElementById("operator").textContent = "-";
 }
 function displayMultiplyQuestion(operand1, operand2) {
-  document.getElementById("operand1").textContent = operand1;
-  document.getElementById("operand2").textContent = operand2;
-  document.getElementById("operator").textContent = "x";
+    document.getElementById("operand1").textContent = operand1;
+    document.getElementById("operand2").textContent = operand2;
+    document.getElementById("operator").textContent = "x";
 }
->>>>>>> 3912fc3561b2bef5957563ca3056736546fb495d
