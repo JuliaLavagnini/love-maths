@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- font awesome and google fonts -->
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
@@ -13,15 +15,30 @@
       href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous"
       rel="stylesheet"
     />
+    <!-- stylesheet link  -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>Document</title>
   </head>
+
   <body>
     <h1 class="heading">
       <img src="images/logo.png" alt="logo" class="logo" /> Love Maths
     </h1>
     <div class="game-area">
-      <div class="controls area"></div>
+      <div class="controls area">
+        <button class="btn btn--big btn--green">
+          <i class="fas fa-plus"></i>
+        </button>
+        <button class="btn btn--big btn--blue">
+          <i class="fas fa-minus"></i>
+        </button>
+        <button class="btn btn--big btn--orange">
+          <i class="fas fa-times"></i>
+        </button>
+        <button class="btn btn--big btn--red">
+          <i class="fas fa-divide"></i>
+        </button>
+      </div>
       <div class="question-area"></div>
     </div>
     <script src="assets/js/script.js"></script>
