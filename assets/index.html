@@ -39,13 +39,20 @@
           <i class="fas fa-divide"></i>
         </button>
       </div>
-      <div class="question-area"></div>
+      <div class="question-area">
+        <span id="operand1">0</span>
+        <span id="operator">x</span>
+        <span id="operand2">0</span>
+        <span>=</span>
+        <p class="asnwer-message">Enter Answer:</p>
+        <input id="answer-box" type="number" />
+        <button class="btn btn--gray">Submit Answer</button>
+      </div>
     </div>
-    <script src="assets/js/script.js"></script>
-    <button></button>
     <div class="score-area">
       <p class="scores">Correct Answers <span id="score">0</span></p>
       <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
     </div>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>
