@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function(){
     runGame("addition");
 })
 
+
 /**
  * Tha main game 'loop', called when the script is first loaded 
  * and after the user's answrr has been processed
@@ -26,6 +27,8 @@ function runGame(gameType){
 
     if (gameType === "addition"){
         displayAdditionQuestion(num1,num2);
+    } else if(gameType === "subtraction"){
+      displaySubtractQuestion(num1, num2);
     } else{
         alert(`Unknown game type: ${gameType}`);
         throw `Unknown game type: ${gameType}. Aborting!`;
@@ -61,9 +64,13 @@ function calculateCorrectAnswer(){
 
     if (operator === "+"){
         return [operand1 + operand2, "addition"];
-    } else{
-        alert(`Unsupported operation '${operator}'`);
-        throw `Unsupported operation '${operator}. Aborting!'`;
+    } else if (operator === "-") {
+      return [operand1 - operand2, "subtraction"];
+    } else if (operator === "x") {
+      return [operand1 * operand2, "multiplication"];
+    } else {
+      alert(`Unsupported operation '${operator}'`);
+      throw `Unsupported operation '${operator}. Aborting!'`;
     }
 }
 function incrementScore(){}
